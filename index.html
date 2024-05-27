@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saharsha's Birthday</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    #welcome-message {
+      font-size: 24px;
+      cursor: pointer;
+      text-align: center;
+      padding: 20px;
+/*      background-color: hotpink;*/
+      background-color: blueviolet;
+      color: #fff;
+      border-radius: 10px;
+      max-width: 90%;
+      margin: 50px auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #welcome-message:hover {
+/*      background-color: pink;*/
+background-color: blue;
+    }
+
+    .birthday-container {
+      display: none;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 90%;
+      margin: 50px auto;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #555;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    div.photos-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px 0;
+    }
+
+    p {
+      text-align: center;
+      color: #555;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 70px;
+      color: #777;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: #333;
+    }
+
+    @media (max-width: 600px) {
+      #welcome-message, .birthday-container {
+        max-width: 100%;
+        margin: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="welcome-message">See here, your wishes, SAHARSHA!</div>
+
+  <div class="birthday-container">
+    <h1 style="color: blueviolet;">A Very Happy Birthday SAHARSHA</h1>
+    <p style="color: #333;">Happy Birthday, SAHARSHA! May this special day bring you joy and happiness.</p>
+    <div class="photos-container">
+      <!-- Replace the image URLs below with actual URLs of the birthday photos -->
+      <img src="https://res.cloudinary.com/dir9xnqbl/image/upload/v1716824615/WhatsApp_Image_2024-05-27_at_20.58.16_qzbmvp.jpg" width="300">
+      <img src="https://res.cloudinary.com/dir9xnqbl/image/upload/v1716824633/WhatsApp_Image_2024-05-27_at_20.58.17_rybm6b.jpg" width="300">
+      <img src="https://res.cloudinary.com/dir9xnqbl/image/upload/v1716824639/WhatsApp_Image_2024-05-27_at_20.58.16_1_g3ckzc.jpg" width="300">
+    </div>
+    <p style="color: #333;">🎉🎂🎈 DEAR SAHARSHA🌟 Wishing you a day as beautiful and wonderful as you are. May your journey be filled with countless moments of joy, endless opportunities, and the fulfillment of all your dreams. ✨ You have a bright future ahead, and I hope you achieve every bit of success and happiness you deserve. 🌸 Stay radiant and keep shining!🌟</p>
+
+   <P> May your heart be filled with love 💖, your mind with wisdom 📚, and your life with endless possibilities 🌈. Never stop believing in yourself, and always reach for the stars. ⭐ You are capable of amazing things, and I’m excited to see all the wonderful things you will accomplish.
+    </p>
+    <span style="float: right; color: #333; font-weight: bold;"><h2>Anand BRO</h2></span>
+    <a href="#" class="back-link" onclick="showHomepage()">Go back to the homepage</a>
+  </div>
+
+  <script>
+    function showBirthdayWishes() {
+      document.getElementById('welcome-message').style.display = 'none';
+      document.querySelector('.birthday-container').style.display = 'block';
+    }
+
+    function showHomepage() {
+      document.querySelector('.birthday-container').style.display = 'none';
+      document.getElementById('welcome-message').style.display = 'block';
+    }
+
+    document.getElementById('welcome-message').addEventListener('click', function() {
+      showBirthdayWishes();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/dc4cdfbc4c.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.bg-container {
+    height: 100vh;
+    background-image: url("https://wallpapercave.com/wp/wp9424379.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading {
+    font-family: "Roboto";
+    font-size: 34px;
+    color: white;
+}
+
+/* Basic button style */
+.styled-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Button hover effect */
+.styled-button:hover {
+    background-color: #010847;
+    color: #fff;
+    border-color: #333;
+}
+
+/* Button active effect */
+.styled-button:active {
+    background-color: #555;
+    border-color: #555;
+    color: #fff;
+}
+
+.container2 {
+    margin: 0px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(#010847, #020633);
+    align-items: center;
+    height: 100vh;
+}
+
+.login-form {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 350px;
+}
+
+.login-form h1 {
+    color: #333;
+    text-align: center;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff5c5c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #e44141;
+}
+
+.admin-container {
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(#010847, #020633);
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.admin-container button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-family: "Roboto";
+    padding: 10px;
+    font-size: 30px;
+}
+
+.admin-container button:hover {
+    color: orange;
+}
+
+.create-user-bg {
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(#010847, #020633);
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.create-new-user-form {
+    padding: 30px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.create-new-user-form input {
+    width: 250px;
+    height: 45px;
+    padding-left: 7px;
+    border-radius: 6px;
+    border: 1px solid gray;
+    margin: 4px;
+}
+
+.create-new-user-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff5c5c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.all-users-bg {
+    padding: 20px;
+    background-image: radial-gradient(#010847, #020633);
+    height: 100vh;
+}
+
+.all-users-bg h2 {
+    color: white;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.pop-up-msg {
+    color: green;
+    font-family: "Roboto";
+    font-size: 25px;
+}
+
+.back-button {
+    background-color: transparent;
+    border: 1px solid white;
+    font-family: "Roboto";
+    color: white;
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+}
+    </style>
+</head>
+
+<body>
+    <div id="sectionHome">
+        <div class="bg-container">
+            <h1 class="heading">Electricity Bill</h1>
+            <button onclick="display('sectionLogInPage')" class="styled-button">Get Started</button>
+        </div>
+    </div>
+    <div id="sectionLogInPage">
+        <div class="container2">
+            <form class="login-form">
+                <h1>Login</h1>
+                <input id="usernameEl" type="text" placeholder="Username" required>
+                <input id="passwordEl" type="password" placeholder="Password" required>
+                <button id="submitBtn" type="button">Log In</button>
+            </form>
+        </div>
+    </div>
+    <div id="sectionAdminPage">
+        <div class="admin-container">
+            <button onclick="display('sectionCreateUser')">Create New User</button>
+            <button onclick="display('sectionAllUsers')">View All Users</button>
+        </div>
+    </div>
+    <div id="sectionCreateUser">
+        <div class="create-user-bg">
+            <form class="create-new-user-form">
+                <input id="newUsername" placeholder="Enter username" />
+                <input id="meterNumber" placeholder="meter number" />
+                <input id="houseNumber" placeholder="house number" />
+                <input id="townName" placeholder="town" />
+                <input id="cityName" placeholder="city" />
+                <input id="stateName" placeholder="State" />
+                <input id="MobileNumber" placeholder="mobile number" />
+                <button id="createUserButton" type="button">Create User</button>
+            </form>
+            <p class="pop-up-msg" id="popUpMsg"></p>
+            <button class="back-button" onclick="display('sectionAdminPage')">Back</button>
+        </div>
+    </div>
+    <div id="sectionAllUsers">
+        <div class="all-users-bg">
+            <h2>Registered Users</h2>
+
+            <table id="usersList">
+                <tr>
+                    <th>Name</th>
+                    <th>Meter No.</th>
+                    <th>Address</th>
+                    <th>Mobile No.</th>
+                </tr>
+                <tr>
+                    <td>Mahek</td>
+                    <td>1A456D</td>
+                    <td>1-89, Vizag, AP</td>
+                    <td>89892 66921</td>
+                </tr>
+                <tr>
+                    <td>Lavanya</td>
+                    <td>1A996C</td>
+                    <td>1-69, Siddipet, Telangana</td>
+                    <td>91775 66921</td>
+                </tr>
+            </table>
+            <button class="back-button" onclick="display('sectionAdminPage')">Back</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+    <script>
+        let usernameEl = document.getElementById("usernameEl");
+let passwordEl = document.getElementById("passwordEl");
+let loginBtn = document.getElementById("submitBtn");
+let userListTableEl = document.getElementById("usersList");
+
+let username = "ElectricityAdmin";
+let password = "@098765";
+
+function passwordcheck() {
+    let enterdPassword = passwordEl.value;
+    if (enterdPassword === "@09876" && usernameEl.value === "ElectricityAdmin") {
+        loginBtn.setAttribute("onclick", "display('sectionAdminPage')");
+    } else {
+        loginBtn.removeAttribute("onclick", "display('sectionAdminPage')");
+    }
+}
+
+passwordEl.addEventListener("keydown", passwordcheck);
+let newUserName = document.getElementById("newUsername");
+let meterNumberEl = document.getElementById("meterNumber");
+let houseNumberEl = document.getElementById("houseNumber");
+let townEl = document.getElementById("townName");
+let cityEl = document.getElementById("cityName");
+let stateEl = document.getElementById("stateName");
+let mobileNoEl = document.getElementById("MobileNumber");
+let createUserBtnEl = document.getElementById("createUserButton");
+let popUpMsgEl = document.getElementById("popUpMsg");
+
+createUserBtnEl.onclick = function() {
+    let condition = newUserName.value !== "" && meterNumberEl.value !== "" && houseNumberEl.value !== "" && townEl.value !== "" && cityEl.value !== "" && stateEl.value !== "" && mobileNoEl.value !== "";
+    if (condition) {
+        let newUserDetailsEl = document.createElement("tr");
+        let newName = newUserName.value;
+        let meterNumber = meterNumberEl.value;
+        let Address = houseNumberEl.value + ", " + townEl.value + ", " + cityEl.value + ", " + stateEl.value;
+        let phoneNumber = mobileNoEl.value;
+        let tdEl1 = document.createElement("td");
+        tdEl1.textContent = newName;
+        newUserDetailsEl.appendChild(tdEl1);
+        let tdEl2 = document.createElement("td");
+        tdEl2.textContent = meterNumber;
+        newUserDetailsEl.appendChild(tdEl2);
+        let tdEl3 = document.createElement("td");
+        tdEl3.textContent = Address;
+        newUserDetailsEl.appendChild(tdEl3);
+        let tdEl4 = document.createElement("td");
+        tdEl4.textContent = phoneNumber;
+        newUserDetailsEl.appendChild(tdEl4);
+        userListTableEl.appendChild(newUserDetailsEl);
+        popUpMsgEl.removeAttribute("style","color:red")
+        popUpMsgEl.textContent = "Added user Successfully!";
+        newUserName.value = "";
+        meterNumberEl.value = "";
+        houseNumberEl.value = "";
+        townEl.value = "";
+        cityEl.value = "";
+        stateEl.value = "";
+        mobileNoEl.value = "";
+    }
+    else {
+        popUpMsgEl.textContent = "Enter all the details"
+        popUpMsgEl.setAttribute("style","color:red")
+    }
+};
+    </script>
+</body>
+
+</html>
